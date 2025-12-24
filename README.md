@@ -69,13 +69,18 @@ GEMINI_API_KEY=your_gemini_api_key_here
 4. Cấu hình build settings:
    - **Build command**: `npm run build`
    - **Build output directory**: `dist`
-   - **Deploy command**: (để trống)
+   - **Deploy command**: ⚠️ **ĐỂ TRỐNG HOẶC XÓA** (không điền `npx wrangler deploy`)
 5. Thêm Environment Variable:
    - **Variable name**: `GEMINI_API_KEY`
    - **Value**: API key của bạn
 6. Click **Save and Deploy**
 
-### Cách 2: Sử dụng Wrangler CLI
+**⚠️ Lưu ý quan trọng**: 
+- Nếu bạn thấy lỗi "Workers-specific command in a Pages project", hãy **XÓA** deploy command trong Cloudflare Pages settings
+- Cloudflare Pages sẽ tự động deploy thư mục `dist` sau khi build, không cần deploy command
+- Nếu muốn dùng deploy command, phải dùng: `npx wrangler pages deploy dist` (không phải `wrangler deploy`)
+
+### Cách 2: Sử dụng Wrangler CLI (Chỉ dùng khi deploy thủ công)
 
 1. Cài đặt Wrangler (nếu chưa có):
 ```bash
@@ -96,6 +101,11 @@ Hoặc:
 ```bash
 wrangler pages deploy dist
 ```
+
+**⚠️ Lưu ý**: 
+- Với Cloudflare Pages Dashboard, **KHÔNG CẦN** dùng cách này
+- Chỉ dùng khi deploy thủ công từ local machine
+- Phải dùng `wrangler pages deploy` (không phải `wrangler deploy`)
 
 ## 📁 Cấu trúc dự án
 
