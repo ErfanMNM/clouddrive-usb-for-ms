@@ -1,0 +1,5 @@
+{
+  "name": "CloudDrive USB",
+  "description": "Một giao diện quản lý file hiện đại, mô phỏng USB lưu trữ đám mây với khả năng phân tích nội dung thông minh bằng Gemini AI.",
+  "requestFramePermissions": []
+}
