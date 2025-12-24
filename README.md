@@ -69,7 +69,9 @@ GEMINI_API_KEY=your_gemini_api_key_here
 4. Cấu hình build settings:
    - **Build command**: `npm run build`
    - **Build output directory**: `dist`
-   - **Deploy command**: ⚠️ **ĐỂ TRỐNG HOẶC XÓA** (không điền `npx wrangler deploy`)
+   - **Deploy command**: 
+     - Nếu là **Optional**: Để trống
+     - Nếu là **Required** (bắt buộc): Điền `echo "Deploying to Cloudflare Pages..."` hoặc `true`
 5. Thêm Environment Variable:
    - **Variable name**: `GEMINI_API_KEY`
    - **Value**: API key của bạn
